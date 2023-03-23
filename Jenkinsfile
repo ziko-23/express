@@ -3,9 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('hub.dockersss')
-        REPO_PATH='/'
-        APP_NAME='test'
+		DOCKERHUB_CREDENTIALS=credentials('hub.docker')
 	}
 	stages {
 		stage('Build') {
@@ -27,7 +25,6 @@ pipeline{
 	post {
 		always {
 			sh 'docker logout'
-            deleteDir()
 		}
 	}
 }
