@@ -7,7 +7,7 @@ const port=3000;
 
 app.get("/", (req, res) => {
 
-res.json({message:'Root page access granted!'})
+res.json({message:'Root page access granted! -> HELLO WORLD'})
 
 })
 
