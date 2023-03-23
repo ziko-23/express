@@ -1,9 +1,7 @@
 pipeline{
 
 	agent any
-    options {
-        gitOption('http.sslVerify', false)
-    }
+
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('hub.docker')
 	}
